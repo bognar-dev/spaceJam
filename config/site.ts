@@ -14,8 +14,8 @@ export const siteConfig = {
       href: "/thelineup",
     },
     {
-      title: "JuniorJam",
-      href: "/",
+      title: "Junior Jam",
+      href: "/juniorjam",
     },
   ],
   links: {

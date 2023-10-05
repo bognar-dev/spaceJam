@@ -1,4 +1,4 @@
-import { Orbitron as FontMono, Inter as FontSans } from "next/font/google"
+import { Orbitron as FontMono, Orbitron as FontSans } from "next/font/google"
 
 export const fontSans = FontSans({
   subsets: ["latin"],
