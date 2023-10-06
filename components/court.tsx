@@ -17,30 +17,30 @@ interface CourtProps {
 export function Court({ teamName, players }: CourtProps) {
     return (
 
-        <div>
             <Card className="">
                 <CardHeader className="flex items-center justify-center">
                     <CardTitle className="text-5xl">{teamName}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                    <ul className="grid gap-6 2xl:grid-flow-col grid-flow-row">
+                <CardContent className="relative flex items-center justify-center m-36">
+                    
+                    <ul className="grid gap-6 2xl:grid-flow-col grid-flow-row z-10">
                         {players.map((player) => (
 
                             <li key={player.id}>
                                 <Avatar>
-                                    <AvatarImage className="rounded-full aspect-auto h-30 w-30 m-5" src={player.img} />
+                                    <AvatarImage className="rounded-full aspect-auto h-30 w-30" src={player.img} />
                                     <AvatarFallback>{player.name}</AvatarFallback>
                                 </Avatar>
-                                <span className="text-xl text-primary p-3">{player.name}</span>
+                                <span className="text-xl text-primary">{player.name}</span>
 
                                 <div>{player.description}</div>
 
                             </li>
                         ))}
                     </ul>
+                    <Icons.court className="fill-accent absolute justify-center w-3/4  m-10"></Icons.court>
                 </CardContent>
             </Card>
 
-        </div>
     );
 }
